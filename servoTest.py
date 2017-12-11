@@ -49,7 +49,7 @@ def doServos():
     robohat.setServo(pan, pVal)
     robohat.setServo(tilt, tVal)
 
-print "Use Arrows or W-Up, Z-Down, A-Left, S-Right Space=Centre, ^C=Exit:"
+print ("Use Arrows or W-Up, Z-Down, A-Left, S-Right Space=Centre, ^C=Exit:")
 
 try:
     while True:
@@ -58,44 +58,44 @@ try:
             tVal = 0
             pVal = 0
             doServos()
-            print "Centre", tVal, pVal
+            print ("Centre", tVal, pVal)
         elif key.upper() == 'L':
             tVal = -90
             pVal = -90
             doServos()
-            print "Left", tVal, pVal
+            print ("Left", tVal, pVal)
         elif key.upper() == 'R':
             tVal = 90
             pVal = 90
             doServos()
-            print "Right", tVal, pVal
+            print ("Right", tVal, pVal)
         elif key ==' x' or key == '.':
             initio.stopServos()
-            print "Stop"
+            print ("Stop")
 
         elif key == 'w' or ord(key) == 16:
             pVal = min(90, pVal+10)
             doServos()
-            print "Up", pVal
+            print ("Up", pVal)
 
         elif key == 'a' or ord(key) == 19:
             tVal = max (-90, tVal-10)
             doServos()
-            print "Left", tVal
+            print ("Left", tVal)
 
         elif key == 's' or ord(key) == 18:
             tVal = min(90, tVal+10)
             doServos()
-            print "Right", tVal
+            print ("Right", tVal)
 
         elif key == 'z' or ord(key) == 17:
             pVal = max(-90, pVal-10)
             doServos()
-            print "Down", pVal
+            print ("Down", pVal)
 
         elif key == 'g':
             robohat.startServos()
-            print "Down"
+            print ("Down")
         elif ord(key) == 3:
             break
 
