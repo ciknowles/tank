@@ -78,7 +78,7 @@ lineLeft = 12
 lineRight = 13
 
 # Define Sonar Pin (Uses same pin for both Ping and Echo)
-sonar = 38
+sonar = 8
 
 ServosActive = False
 

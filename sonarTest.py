@@ -7,7 +7,7 @@ try:
     while True:
         dist = robohat.getDistance()
         print "Distance: ", int(dist)
-        time.sleep(1)
+        time.sleep(0.1)
 
 except KeyboardInterrupt:
     print

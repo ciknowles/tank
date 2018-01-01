@@ -2,6 +2,7 @@
 # servoTest.py
 
 import robohat
+from TankServos import TankServos
 
 # Define pins for Pan/Tilt
 pan = 0
@@ -45,10 +46,13 @@ def readkey(getchar_fn=None):
 robohat.init()
 #print "Robohat version: ", robohat.version()
 
-def doServos():
-    robohat.setServo(pan, pVal)
-    robohat.setServo(tilt, tVal)
+servos = TankServos()
 
+def doServos():
+    #robohat.setServo(pan, pVal)
+    #robohat.setServo(tilt, tVal)
+    servos.doServos(pVal,tVal)
+    
 print ("Use Arrows or W-Up, Z-Down, A-Left, S-Right Space=Centre, ^C=Exit:")
 
 try:
@@ -104,3 +108,4 @@ except KeyboardInterrupt:
 
 finally:
     robohat.cleanup()
+

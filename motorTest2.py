@@ -69,6 +69,16 @@ try:
             print 'Spin Left', speed
         elif keyp == '.' or keyp == '>':
             speed = min(100, speed+10)
+        elif keyp == 'p' :
+            robohat.turnForward(100,30)
+            print 'Speed+', speed
+        elif keyp == '8' :
+            robohat.turnForward(100,30)
+            while True:
+                robohat.turnForward(30,100)
+            print 'Speed+', speed
+        elif keyp == 'o' :
+            robohat.turnForward(30,100)
             print 'Speed+', speed
         elif keyp == ',' or keyp == '<':
             speed = max (0, speed-10)
